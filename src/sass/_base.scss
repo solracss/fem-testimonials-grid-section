@@ -1,8 +1,19 @@
 @use "sass:math";
 
+// funcrions
 @function remSize($size) {
 	$remSize: math.div($size, 16px);
 	@return #{$remSize}rem;
+}
+
+// mixins
+@mixin setHslaColor($property, $hslcolor, $alpha: 1) {
+	#{$property}: hsla(
+		hue($hslcolor),
+		saturation($hslcolor),
+		lightness($hslcolor),
+		$alpha
+	);
 }
 
 @mixin pseudo(
@@ -42,5 +53,21 @@ $breakpoints: (
 }
 
 // colors
+$clr-neutral-100: hsl(0, 0%, 100%);
+$clr-neutral-200: hsl(0, 0%, 81%);
+
+$clr-primary-200: hsl(210, 46%, 95%);
+$clr-primary-400: hsl(217, 19%, 35%);
+$clr-primary-600: hsl(219, 29%, 14%);
+
+$clr-accent-400: hsl(263, 55%, 52%);
 
 // typography
+$ff-base: "Barlow Semi Condensed", sans-serif;
+
+$fw-regular: 500;
+$fw-bold: 600;
+
+$fs-11: 0.6875rem;
+$fs-13: 0.8125rem;
+$fs-20: 1.25rem;
