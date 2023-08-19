@@ -1,0 +1,46 @@
+@use "sass:math";
+
+@function remSize($size) {
+	$remSize: math.div($size, 16px);
+	@return #{$remSize}rem;
+}
+
+@mixin pseudo(
+	$type: before,
+	$pos: absolute,
+	$content: "",
+	$top: 0,
+	$left: 0,
+	$bottom: 0,
+	$right: 0
+) {
+	position: relative;
+	&::#{$type} {
+		content: $content;
+		position: $pos;
+		top: $top;
+		left: $left;
+		bottom: $bottom;
+		right: $right;
+		@content;
+	}
+}
+
+$breakpoints: (
+	large: 65em,
+);
+
+@mixin media($size) {
+	@if map.has-key($breakpoints, $size) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media screen and (min-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@error 'the keyword #{$size} is not in the $breakpoints map';
+	}
+}
+
+// colors
+
+// typography
