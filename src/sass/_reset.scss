@@ -17,6 +17,7 @@ html {
 body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
+	min-height: 100dvh;
 }
 
 a {
@@ -34,31 +35,7 @@ h6 {
 }
 
 img,
-picture,
-video,
-canvas,
 svg {
 	max-width: 100%;
 	display: block;
-}
-
-input,
-button,
-textarea,
-select {
-	font-family: inherit;
-}
-
-button {
-	border: none;
-	cursor: pointer;
-}
-
-textarea {
-	resize: vertical;
-}
-
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
