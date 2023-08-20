@@ -1,4 +1,5 @@
 @use "sass:math";
+@use "sass:map";
 
 // funcrions
 @function remSize($size) {
@@ -60,7 +61,22 @@ $clr-primary-200: hsl(210, 46%, 95%);
 $clr-primary-400: hsl(217, 19%, 35%);
 $clr-primary-600: hsl(219, 29%, 14%);
 
+$clr-accent-300: hsla(264, 82%, 70%);
 $clr-accent-400: hsl(263, 55%, 52%);
+
+$colors: (
+	"neutral": (
+		"100": $clr-neutral-100,
+	),
+	"primary": (
+		"200": $clr-primary-200,
+		"400": $clr-primary-400,
+		"600": $clr-primary-600,
+	),
+	"accent": (
+		"400": $clr-accent-400,
+	),
+);
 
 // typography
 $ff-base: "Barlow Semi Condensed", sans-serif;
@@ -71,3 +87,20 @@ $fw-bold: 600;
 $fs-11: 0.6875rem;
 $fs-13: 0.8125rem;
 $fs-20: 1.25rem;
+
+// utility classes
+
+@each $color, $shade-map in $colors {
+	@each $shade, $value in $shade-map {
+		.clr-#{$color}-#{$shade} {
+			color: $value;
+		}
+		.bg-#{$color}-#{$shade} {
+			background-color: $value;
+		}
+	}
+}
+
+.violet-border {
+	border: 2px solid $clr-accent-300;
+}
