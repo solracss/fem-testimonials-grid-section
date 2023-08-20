@@ -2,6 +2,7 @@
 
 .testimonial {
 	padding: 1.625rem 2rem 2rem;
+	max-width: 540px;
 	border-radius: 8px;
 	box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
 
@@ -16,6 +17,7 @@
 		}
 
 		&-isVerified {
+			font-size: 0.6875rem;
 			opacity: 0.5;
 		}
 	}
