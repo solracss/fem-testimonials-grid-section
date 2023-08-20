@@ -35,3 +35,13 @@
 		opacity: 0.7;
 	}
 }
+
+.testimonial-main {
+	& .testimonial-content {
+		margin-top: 2.5rem;
+
+		@include media(large) {
+			margin-top: 1rem;
+		}
+	}
+}
