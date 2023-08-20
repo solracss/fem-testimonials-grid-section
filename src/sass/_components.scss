@@ -1,1 +1,36 @@
 @use "./base" as *;
+
+.testimonial {
+	padding: 1.625rem 2rem 2rem;
+	background-color: $clr-neutral-100;
+	border-radius: 8px;
+	box-shadow: 40px 60px 50px -47px rgba(72, 85, 106, 0.25);
+
+	& .author {
+		gap: 1rem;
+		line-height: 0.8125rem;
+
+		&-photo {
+			width: 1.75rem;
+			height: 1.75rem;
+			border-radius: 50%;
+		}
+
+		&-isVerified {
+			opacity: 0.5;
+		}
+	}
+
+	&-heading {
+		margin-top: 1.125rem;
+		font-size: $fs-20;
+		font-weight: $fw-bold;
+		line-height: 1.5rem;
+	}
+
+	&-content {
+		margin-top: 1rem;
+		line-height: 1.125rem;
+		opacity: 0.7;
+	}
+}
