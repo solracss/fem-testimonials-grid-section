@@ -18,3 +18,12 @@ main {
 	width: min(100% - 3rem, 69.375rem);
 	margin-inline: auto;
 }
+
+.flex-flow {
+	display: flex;
+}
+
+.grid-flow {
+	display: grid;
+	gap: 1.5rem;
+}
