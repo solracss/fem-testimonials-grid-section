@@ -37,11 +37,22 @@
 }
 
 .testimonial-main {
+	isolation: isolate;
+
 	& .testimonial-content {
 		margin-top: 2.5rem;
 
 		@include media(large) {
 			margin-top: 1rem;
 		}
+	}
+
+	@include pseudo {
+		background: url("../public/img/bg-pattern-quotation.svg") no-repeat;
+		width: remSize(104px);
+		height: remSize(102px);
+		top: 0;
+		right: 1.5rem;
+		z-index: -1;
 	}
 }
