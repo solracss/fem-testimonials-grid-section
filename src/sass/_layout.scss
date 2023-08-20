@@ -10,6 +10,10 @@ body {
 	background-color: $clr-primary-200;
 }
 
+main {
+	padding-block: 4.4375rem;
+}
+
 .container {
 	width: min(100% - 3rem, 69.375rem);
 	margin-inline: auto;
