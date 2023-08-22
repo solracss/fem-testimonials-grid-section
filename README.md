@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live]()
+- Live Site URL: [Live](https://solracss.github.io/fem-testimonials-grid-section/)
 
 ## My process
 
