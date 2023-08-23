@@ -20,9 +20,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile](./screenshot.jpg)
-
-![Desktop](./screenshot.jpg)
+![](https://i.imgur.com/c0bG6oO.png)
 
 ### Links
 
@@ -37,3 +35,18 @@ Users should be able to:
 ### What I learned
 
 1. Configure Vite to serve simple static site from `src/` folder, and having all `img` copied to `dist` after `run build` script is executed.
+
+2. Use some of Sass magic like loops for creating few utility classes
+
+````css
+@each $color, $shade-map in $colors {
+	@each $shade, $value in $shade-map {
+		.clr-#{$color}-#{$shade} {
+			color: $value;
+		}
+		.bg-#{$color}-#{$shade} {
+			background-color: $value;
+		}
+	}
+}```
+````
