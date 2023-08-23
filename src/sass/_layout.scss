@@ -26,31 +26,53 @@ main {
 .grid-flow {
 	display: grid;
 	gap: 1.5rem;
+	grid-auto-columns: 1fr;
+	grid-template-areas:
+		"one"
+		"two"
+		"three"
+		"four"
+		"five";
+
+	@include media(small) {
+		grid-template-areas:
+			"one one"
+			"two three"
+			"four four"
+			"five five";
+	}
+
+	@include media(medium) {
+		grid-template-areas:
+			"one one"
+			"three five"
+			"four five"
+			"four two";
+	}
 
 	@include media(large) {
-		grid-template-columns: repeat(4, 1fr);
-		column-gap: 1.875rem;
+		grid-template-areas:
+			"one one two five"
+			"three four four five";
 	}
 }
 
-@include media(large) {
-	.testimonial:nth-of-type(1) {
-		grid-area: 1 / 1 / 1 / 3;
-	}
+.testimonial:nth-of-type(1) {
+	grid-area: one;
+}
 
-	.testimonial:nth-of-type(2) {
-		grid-area: 1 / 3 / 1 / 4;
-	}
+.testimonial:nth-of-type(2) {
+	grid-area: two;
+}
 
-	.testimonial:nth-of-type(3) {
-		grid-area: 2 / 1 / 2 / 2;
-	}
+.testimonial:nth-of-type(3) {
+	grid-area: three;
+}
 
-	.testimonial:nth-of-type(4) {
-		grid-area: 2 / 2 / 2 / 4;
-	}
+.testimonial:nth-of-type(4) {
+	grid-area: four;
+}
 
-	.testimonial:nth-of-type(5) {
-		grid-area: 1 / 4 / 3 / 5;
-	}
+.testimonial:nth-of-type(5) {
+	grid-area: five;
 }

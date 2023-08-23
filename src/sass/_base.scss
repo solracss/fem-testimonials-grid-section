@@ -27,7 +27,9 @@
 }
 
 $breakpoints: (
-	large: 65em,
+	small: remSize(640px),
+	medium: remSize(768px),
+	large: remSize(1024px),
 );
 
 @mixin media($size) {
